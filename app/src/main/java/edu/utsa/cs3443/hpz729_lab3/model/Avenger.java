@@ -3,8 +3,7 @@ package edu.utsa.cs3443.hpz729_lab3.model;
 /**
  * @author Mickey Clarke hpz729
  */
-public class Avenger extends Person
-{
+public class Avenger extends Person {
     private String alias;
     private String current_location;
     private boolean powers;
@@ -18,19 +17,20 @@ public class Avenger extends Person
      * @param powers
      */
     public Avenger(String name, int height, int weight, String alias,
-                   String current_location, boolean powers)
-    {
+                   String current_location, boolean powers) {
         super(name, height, weight);
         this.alias = alias;
         this.current_location = current_location;
         this.powers = powers;
     }
+
     /**
      * @return
      */
     public boolean isPowers() {
         return powers;
     }
+
     /**
      * @param powers
      */
@@ -62,7 +62,5 @@ public class Avenger extends Person
     /**
      * @param alias
      */
-    public void setAlias(String alias) {
-        this.alias = alias;
-    }
+    public void setAlias(String alias) { this.alias = alias;}
 }
