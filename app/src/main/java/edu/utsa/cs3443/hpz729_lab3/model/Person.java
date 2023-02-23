@@ -1,7 +1,7 @@
 package edu.utsa.cs3443.hpz729_lab3.model;
 
 /**
- *
+ * TODO//toString()
  *
  *
  *
@@ -13,10 +13,16 @@ package edu.utsa.cs3443.hpz729_lab3.model;
  */
 public abstract class Person
 {
-    private String name;
-    private int height;
-    private int weight;
+    private String name; //Persons name
+    private int height; //Persons height
+    private int weight; //Persons weight
 
+    /**
+     * Person constructor
+     * @param name
+     * @param height
+     * @param weight
+     */
     public Person(String name, int height, int weight)
     {
         this.name = name;
@@ -25,17 +31,14 @@ public abstract class Person
     }
 
     /**
-     * @return
+     * @return s
      */
-    private String toString()
+    public String toString()
     {
-        return null;
+        //TODO
+        String s = "";
+        return s;
     }
-
-
-
-
-
 
 
     /**

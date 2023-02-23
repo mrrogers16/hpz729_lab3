@@ -1,9 +1,10 @@
 package edu.utsa.cs3443.hpz729_lab3.model;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
- *
+ * TODO//loadAvengers(), getAvenger()
  *
  *@author Mickey Clarke (abc123)
  * UTSA CS 3443
@@ -23,11 +24,15 @@ public class Team {
 
     /**
      * The getAvenger method takes in a string of type avenger and returns and Avenger object
-     * @param avenger
+     * @param alias
      * @return Avenger
      */
-public Avenger getAvenger(String alias) {
-    return Avenger;
+public Avenger getAvenger(String alias)
+{
+    for(int i = 0; i < avengerList.size(); i++)
+    {
+        if()
+    }
 }
 
     /**
