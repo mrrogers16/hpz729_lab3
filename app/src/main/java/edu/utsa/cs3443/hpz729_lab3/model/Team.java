@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
- * TODO//loadAvengers(), getAvenger()
+ * TODO//loadAvengers()
  *
  *@author Mickey Clarke (abc123)
  * UTSA CS 3443
@@ -31,8 +31,12 @@ public Avenger getAvenger(String alias)
 {
     for(int i = 0; i < avengerList.size(); i++)
     {
-        if()
+        if(avengerList.get(i).getAlias().equals(alias))
+        {
+            return avengerList.get(i);
+        }
     }
+    return null;
 }
 
     /**
