@@ -4,13 +4,16 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
- * @author Mickey Clarke hpz729
+ *
+ * @author Mickey Clarke (abc123)
+ * UTSA CS 3443
+ * - Lab 3 Spring 2023
  */
 public class Avenger extends Person {
     private String alias;//Extends person class and inherits name, weight, and height
     private String current_location;//Super hero's current location
     private boolean powers;//Boolean indicating if the hero has powers or not.
-    private ArrayList<Person> personList = new ArrayList<Person>();
+
 
 
     /**
@@ -71,16 +74,15 @@ public class Avenger extends Person {
 
 
     /**
-     * @return s - String
+     * @return s - String representation of an Avengers object
      */
     @Override
     public String toString()
     {
-        String s = "";
-        for(int i = 0; i < personList.size();i++)
-        {
-            s += personList.get(i).toString();
-        }
+        String s = "Name: " + getName() + "\n Height: " + getHeight() + "\n Weight: " + getWeight()
+                + "\n Alias: " + getAlias() + "\n Current Location: " + getCurrent_location() +
+                "\n Has super powers?: " + isPowers();
+
         return s;
     }
 }

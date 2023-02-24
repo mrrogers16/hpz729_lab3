@@ -1,7 +1,7 @@
 package edu.utsa.cs3443.hpz729_lab3.model;
 
 /**
- * TODO//toString()
+ *
  *
  * @author Mickey Clarke (abc123)
  * UTSA CS 3443
@@ -31,7 +31,7 @@ public abstract class Person {
     @Override
     public String toString() {
         //TODO
-        String s = "Name: " + getName() + " Height: " + getHeight() + " Weight: " + getWeight();
+        String s = "Name: " + getName() + "\n Height: " + getHeight() + "\n Weight: " + getWeight();
         return s;
     }
 

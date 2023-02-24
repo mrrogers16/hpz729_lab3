@@ -11,7 +11,7 @@ import java.io.BufferedReader;
  *
  * @author Mickey Clarke (abc123)
  * UTSA CS 3443
- * - Lab 1 Spring 2023
+ * - Lab 3 Spring 2023
  */
 public class Team {
 
