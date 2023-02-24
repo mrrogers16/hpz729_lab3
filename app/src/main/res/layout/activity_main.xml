@@ -56,10 +56,10 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="396dp"
-        android:layout_height="359dp"
+        android:layout_width="333dp"
+        android:layout_height="300dp"
         app:srcCompat="@drawable/shield"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="29dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
