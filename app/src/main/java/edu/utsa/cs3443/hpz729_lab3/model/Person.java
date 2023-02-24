@@ -28,9 +28,10 @@ public abstract class Person {
     /**
      * @return s
      */
+    @Override
     public String toString() {
         //TODO
-        String s = "";
+        String s = "Name: " + getName() + " Height: " + getHeight() + " Weight: " + getWeight();
         return s;
     }
 

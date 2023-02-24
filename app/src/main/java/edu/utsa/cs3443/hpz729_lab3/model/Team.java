@@ -41,28 +41,27 @@ public class Team {
     @Override
     public String toString() {
         String s = "";
+        for(int i = 0;i < avengerList.size();i++)
+        {
+            s += avengerList.get(i).toString() + "\n";
+        }
         return s;
     }
 
-    public void loadAvengers(String directoryName) throws Exception
-    {
+    public void loadAvengers(String directoryName) throws Exception {
         String line = "";
         String seperator = ",";
         File folder = new File(directoryName);
         File[] listOfFiles = folder.listFiles();
-        for (int i = 0; i < listOfFiles.length; i++)
-        {
-            if (listOfFiles[i].isFile() && listOfFiles[i].getName().endsWith(".csv"))
-            {
-                while ((line = buffer.readLine()) != null)
-                {
-                    String[] fields = line.split(seperator);
-                //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
-                Avenger avenger = new Avenger(fields[0], Integer.parseInt(fields[1]), Integer.parseInt(fields[2]), fields[3], fields[4], Boolean.parseBoolean(fields[5]));
-                avengerList.add(avenger);
-                for(String s : avengerList)
-                {
-                    System.out.println(s);
+        for (int i = 0; i < listOfFiles.length; i++) {
+            if (listOfFiles[i].isFile() && listOfFiles[i].getName().endsWith(".csv")) {
+                try (BufferedReader buffer = new BufferedReader(new FileReader(listOfFiles[i]))) {
+                    while ((line = buffer.readLine()) != null) {
+                        String[] fields = line.split(seperator);
+                        //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
+                        Avenger avenger = new Avenger(fields[0], Integer.parseInt(fields[1]), Integer.parseInt(fields[2]), fields[3], fields[4], Boolean.parseBoolean(fields[5]));
+                        avengerList.add(avenger);
+                    }
                 }
             }
         }
