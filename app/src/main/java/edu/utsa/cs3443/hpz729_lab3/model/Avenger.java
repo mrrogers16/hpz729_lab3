@@ -68,7 +68,7 @@ public class Avenger extends Person {
     }
 
     /**
-     * @param alias
+     * @param alias - String
      */
     public void setAlias(String alias) { this.alias = alias;}
 
