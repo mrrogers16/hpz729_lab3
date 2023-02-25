@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * - Lab 3 Spring 2023
  */
 public class Avenger extends Person {
-    private String alias;//Extends person class and inherits name, weight, and height
+    private String alias;//Super hero's alias
     private String current_location;//Super hero's current location
     private boolean powers;//Boolean indicating if the hero has powers or not.
 

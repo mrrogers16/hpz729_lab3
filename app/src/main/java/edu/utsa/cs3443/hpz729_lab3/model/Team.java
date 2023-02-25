@@ -1,6 +1,5 @@
 package edu.utsa.cs3443.hpz729_lab3.model;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileReader;
@@ -19,6 +18,11 @@ import java.io.BufferedReader;
 public class Team {
 
     private ArrayList<Avenger> avengerList = new ArrayList<Avenger>();
+
+    public Team()
+    {
+
+    }
 
 
     /**
