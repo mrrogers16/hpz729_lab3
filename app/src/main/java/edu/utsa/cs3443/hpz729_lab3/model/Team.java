@@ -6,8 +6,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
 
-/**
- * TODO//loadAvengers()
+/** Team.java is a class that contains an ArrayList of Avenger objects. It contains methods to
+ * retrieve a specific Avenger named getAvenger(), an overridden toString() method that returns a
+ * String representation of all of the members of the team, and a loadAvengers method that takes
+ * in a String filepath.csv and builds Avenger objects from the properly formatted .csv, it returns
+ * nothing.
  *
  * @author Mickey Clarke (abc123)
  * UTSA CS 3443
@@ -36,7 +39,7 @@ public class Team {
     }
 
     /**
-     * @return
+     * @return s - String representation of a Team of Avengers
      */
     @Override
     public String toString() {
@@ -48,6 +51,10 @@ public class Team {
         return s;
     }
 
+    /**
+     * @param directoryName - String of input files to build Avenger objects
+     * @throws Exception
+     */
     public void loadAvengers(String directoryName) throws Exception {
         String line = "";
         String seperator = ",";

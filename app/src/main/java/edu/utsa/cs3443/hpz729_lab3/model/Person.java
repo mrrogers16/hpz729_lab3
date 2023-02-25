@@ -1,6 +1,9 @@
 package edu.utsa.cs3443.hpz729_lab3.model;
 
 /**
+ * The Person.java class is abstract and contains a String name, int height, and int weight.
+ * It contains an overridden toString() method that returns a String representation of a Person
+ * as well as all getters and setters.
  *
  *
  * @author Mickey Clarke (abc123)
@@ -15,9 +18,9 @@ public abstract class Person {
     /**
      * Person constructor
      *
-     * @param name
-     * @param height
-     * @param weight
+     * @param name - String
+     * @param height - int
+     * @param weight - int
      */
     public Person(String name, int height, int weight) {
         this.name = name;
@@ -26,7 +29,7 @@ public abstract class Person {
     }
 
     /**
-     * @return s
+     * @return s - String representation of a person object
      */
     @Override
     public String toString() {
@@ -37,42 +40,42 @@ public abstract class Person {
 
 
     /**
-     * @return
+     * @return - String name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @param name
+     * @param name - String
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * @return
+     * @return - int height
      */
     public int getHeight() {
         return height;
     }
 
     /**
-     * @param height
+     * @param height - int
      */
     public void setHeight(int height) {
         this.height = height;
     }
 
     /**
-     * @return
+     * @return - int weight
      */
     public int getWeight() {
         return weight;
     }
 
     /**
-     * @param weight
+     * @param weight - int
      */
     public void setWeight(int weight) {
         this.weight = weight;

@@ -7,59 +7,66 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/thor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="387dp" />
+        android:text="Thor"
+        app:layout_constraintBottom_toTopOf="@+id/hulk"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/capitan_america"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="530dp" />
+        android:text="Capitan America"
+        app:layout_constraintBottom_toTopOf="@+id/spiderman"
+        app:layout_constraintEnd_toEndOf="@+id/doctor_strange"
+        app:layout_constraintStart_toStartOf="@+id/doctor_strange"
+        app:layout_constraintTop_toBottomOf="@+id/hulk" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/spiderman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="578dp" />
+        android:layout_marginBottom="105dp"
+        android:text="Spiderman"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/capitan_america"
+        app:layout_constraintStart_toStartOf="@+id/capitan_america"
+        app:layout_constraintTop_toBottomOf="@+id/capitan_america" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/doctor_strange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="483dp" />
+        android:text="Doctor Strange"
+        app:layout_constraintEnd_toEndOf="@+id/hulk"
+        app:layout_constraintStart_toStartOf="@+id/hulk"
+        app:layout_constraintTop_toBottomOf="@+id/hulk" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/hulk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="435dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="342dp" />
+        android:layout_marginBottom="47dp"
+        android:text="Hulk"
+        app:layout_constraintBottom_toTopOf="@+id/capitan_america"
+        app:layout_constraintEnd_toEndOf="@+id/thor"
+        app:layout_constraintStart_toStartOf="@+id/thor"
+        app:layout_constraintTop_toBottomOf="@+id/thor" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="333dp"
-        android:layout_height="300dp"
-        app:srcCompat="@drawable/shield"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="29dp" />
+        android:layout_height="0dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="58dp"
+        app:layout_constraintBottom_toTopOf="@+id/thor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shield" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
