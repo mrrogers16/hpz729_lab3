@@ -11,7 +11,7 @@
         android:id="@+id/thor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thor"
+        android:text="@string/thor"
         app:layout_constraintBottom_toTopOf="@+id/hulk"
         app:layout_constraintEnd_toEndOf="@+id/imageButton"
         app:layout_constraintStart_toStartOf="@+id/imageButton"
@@ -21,7 +21,7 @@
         android:id="@+id/capitan_america"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Capitan America"
+        android:text="@string/capitan_america"
         app:layout_constraintBottom_toTopOf="@+id/spiderman"
         app:layout_constraintEnd_toEndOf="@+id/doctor_strange"
         app:layout_constraintStart_toStartOf="@+id/doctor_strange"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="105dp"
-        android:text="Spiderman"
+        android:text="@string/spiderman"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/capitan_america"
         app:layout_constraintStart_toStartOf="@+id/capitan_america"
@@ -42,7 +42,7 @@
         android:id="@+id/doctor_strange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Doctor Strange"
+        android:text="@string/doctor_strange"
         app:layout_constraintEnd_toEndOf="@+id/hulk"
         app:layout_constraintStart_toStartOf="@+id/hulk"
         app:layout_constraintTop_toBottomOf="@+id/hulk" />
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="47dp"
-        android:text="Hulk"
+        android:text="@string/hulk"
         app:layout_constraintBottom_toTopOf="@+id/capitan_america"
         app:layout_constraintEnd_toEndOf="@+id/thor"
         app:layout_constraintStart_toStartOf="@+id/thor"
@@ -70,5 +70,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shield" />
+
+    <EditText
+        android:id="@+id/lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:inputType="textPersonName"
+        android:text="@string/BannerName"
+        app:layout_constraintBottom_toTopOf="@+id/thor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

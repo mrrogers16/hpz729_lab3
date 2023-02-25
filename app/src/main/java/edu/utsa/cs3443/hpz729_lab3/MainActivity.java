@@ -10,15 +10,13 @@ import android.widget.Toast;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-import edu.utsa.cs3443.hpz729_lab3.controller.AvengersController;
+import edu.utsa.cs3443.hpz729_lab3.controller.*;
 import edu.utsa.cs3443.hpz729_lab3.model.*;
 
-public class MainActivity extends AppCompatActivity
-{
+public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -30,19 +28,7 @@ public class MainActivity extends AppCompatActivity
         Button capitan_btn = findViewById(R.id.capitan_america);
         Button spiderman_btn = findViewById(R.id.spiderman);
 
-
-        thor_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Thor's info will be shown.", Toast.LENGTH_LONG).show();
-            }
-        });
-        hulk_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Hulk's info will be shown", Toast.LENGTH_LONG).show();
-            }
-        });
+        thor_btn.setOnClickListener(new ThorButtonController());
 
     }
 }
