@@ -30,7 +30,7 @@ public class Team {
      * and returns and Avenger object if the alias if found. If
      * it is not null is returned.
      *
-     * @param alias
+     * @param alias - String
      * @return Avenger
      */
     public Avenger getAvenger(String alias) {
@@ -70,7 +70,9 @@ public class Team {
                     while ((line = buffer.readLine()) != null) {
                         String[] fields = line.split(seperator);
                         //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
-                        Avenger avenger = new Avenger(fields[0], Integer.parseInt(fields[1]), Integer.parseInt(fields[2]), fields[3], fields[4], Boolean.parseBoolean(fields[5]));
+                        Avenger avenger = new Avenger(fields[0], Integer.parseInt(fields[1]),
+                                Integer.parseInt(fields[2]), fields[3], fields[4],
+                                Boolean.parseBoolean(fields[5]));
                         avengerList.add(avenger);
                     }
                 }

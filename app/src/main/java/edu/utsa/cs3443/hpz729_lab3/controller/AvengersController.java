@@ -10,6 +10,11 @@ import edu.utsa.cs3443.hpz729_lab3.R;
 
 public class AvengersController implements View.OnClickListener
 {
+
+    public AvengersController()
+    {
+
+    }
     @Override
     public void onClick(View view) {
 
