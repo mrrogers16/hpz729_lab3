@@ -33,6 +33,7 @@ public class Avenger extends Person {
         this.powers = powers; //Boolean indicating if the hero has powers or not.
     }
 
+
     /**
      * @return powers - Boolean indicating if the hero has powers or not.
      */
