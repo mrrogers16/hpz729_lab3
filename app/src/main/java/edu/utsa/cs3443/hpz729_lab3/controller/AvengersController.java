@@ -37,11 +37,11 @@ public class AvengersController implements View.OnClickListener {
         }
 
         avenger = team.getAvenger(alias);
-        if (avenger == null) {
-            Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(view.getContext(), avenger.getAlias(), Toast.LENGTH_SHORT).show();
-        }
+//        if (avenger == null) {
+//           Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
+//        } else {
+            Toast.makeText(view.getContext(), avenger.getCurrent_location(), Toast.LENGTH_SHORT).show();
+//        }
     }
 
 
