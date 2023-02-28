@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Team.java is a class that contains an ArrayList of Avenger objects. It contains methods to
@@ -21,10 +22,10 @@ import java.util.Objects;
  */
 public class Team {
 
-    private ArrayList<Avenger> avengerList = new ArrayList<Avenger>();
+    private ArrayList<Avenger> avengerList;
 
     public Team() {
-
+        avengerList = new ArrayList<>();
     }
 
     public void addAvenger(Avenger avenger) {
