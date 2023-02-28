@@ -32,7 +32,7 @@ public class Team {
      * and returns and Avenger object if the alias if found. If
      * it is not null is returned.
      *
-     * @param alias
+     * @param alias - String
      * @return Avenger
      */
     public Avenger getAvenger(String alias) {

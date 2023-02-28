@@ -22,6 +22,13 @@ public class AvengersController implements View.OnClickListener {
         this.context = context;
     }
 
+public class AvengersController implements View.OnClickListener
+{
+
+    public AvengersController()
+    {
+
+    }
     @Override
     public void onClick(View view) {
         team = new Team();
