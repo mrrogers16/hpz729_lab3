@@ -4,10 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.content.res.AssetManager;
 import android.widget.Toast;
-
-import java.io.IOException;
 import java.io.InputStream;
-
 import edu.utsa.cs3443.hpz729_lab3.model.*;
 
 public class AvengersController implements View.OnClickListener {
@@ -37,11 +34,11 @@ public class AvengersController implements View.OnClickListener {
         }
 
         avenger = team.getAvenger(alias);
-//        if (avenger == null) {
-//           Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
-//        } else {
+        if (avenger == null) {
+           Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
+        } else {
             Toast.makeText(view.getContext(), avenger.getCurrent_location(), Toast.LENGTH_SHORT).show();
-//        }
+        }
     }
 
 
