@@ -5,27 +5,30 @@ package edu.utsa.cs3443.hpz729_lab3.model;
  * It contains an overridden toString() method that returns a String representation of a Person
  * as well as all getters and setters.
  *
- *
  * @author Mickey Clarke (abc123)
  * UTSA CS 3443
  * - Lab 1 Spring 2023
  */
 public abstract class Person {
     private String name; //Persons name
-    private int height; //Persons height
+    private int height_inches;
+    private int height_feet;//Persons height
     private int weight; //Persons weight
-
+    private String gender;
     /**
      * Person constructor
      *
-     * @param name - String
-     * @param height - int
-     * @param weight - int
+     * @param name          - String
+     * @param height_inches - int
+     * @param height_feet   - int
+     * @param weight        - int
      */
-    public Person(String name, int height, int weight) {
+    public Person(String name, int height_inches, int height_feet, int weight, String gender) {
         this.name = name;
-        this.height = height;
+        this.height_inches = height_inches;
+        this.height_feet = height_feet;
         this.weight = weight;
+        this.gender = gender;
     }
 
     /**
@@ -33,8 +36,9 @@ public abstract class Person {
      */
     @Override
     public String toString() {
-        //TODO
-        String s = "Name: " + getName() + "\n Height: " + getHeight() + "\n Weight: " + getWeight();
+
+        String s = "Name: " + getName() + "\n Height: " + getHeight_feet() + " "
+                + getHeight_inches() + "\n Weight: " + getWeight();
         return s;
     }
 
@@ -53,23 +57,7 @@ public abstract class Person {
         this.name = name;
     }
 
-    /**
-     * @return - int height
-     */
-    public int getHeight() {
-        return height;
-    }
 
-    /**
-     * @param height - int
-     */
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    /**
-     * @return - int weight
-     */
     public int getWeight() {
         return weight;
     }
@@ -79,6 +67,22 @@ public abstract class Person {
      */
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public int getHeight_inches() {
+        return height_inches;
+    }
+
+    public void setHeight_inches(int height_inches) {
+        this.height_inches = height_inches;
+    }
+
+    public int getHeight_feet() {
+        return height_feet;
+    }
+
+    public void setHeight_feet(int height_feet) {
+        this.height_feet = height_feet;
     }
 }
 

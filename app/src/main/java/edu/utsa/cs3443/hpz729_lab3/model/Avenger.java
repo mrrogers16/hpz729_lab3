@@ -18,15 +18,16 @@ public class Avenger extends Person {
 
     /**
      * @param name - String
-     * @param height - int
+     * @param height_feet - int
+     * @param height_inches - int
      * @param weight - int
      * @param alias - String
      * @param current_location - String
      * @param powers - Boolean
      */
-    public Avenger(String name, int height, int weight, String alias,
-                   String current_location, boolean powers) {
-        super(name, height, weight);//Extends person class and inherits name, weight, and height
+    public Avenger(String name, int height_feet, int height_inches, int weight, String alias,
+                   String current_location, boolean powers, String gender) {
+        super(name, height_feet, height_inches, weight, gender);//Extends person class and inherits name, weight, and height
         this.alias = alias; //Super hero's alias (nickname)
         this.current_location = current_location; //Super hero's current location
         this.powers = powers; //Boolean indicating if the hero has powers or not.
@@ -79,7 +80,8 @@ public class Avenger extends Person {
     @Override
     public String toString()
     {
-        String s = "Name: " + getName() + "\n Height: " + getHeight() + "\n Weight: " + getWeight()
+        String s = "Name: " + getName() + "\n Height: " + getHeight_feet() + "ft "
+                + getHeight_inches() + " inches" + "\n Weight: " + getWeight()
                 + "\n Alias: " + getAlias() + "\n Current Location: " + getCurrent_location() +
                 "\n Has super powers?: " + isPowers();
 
