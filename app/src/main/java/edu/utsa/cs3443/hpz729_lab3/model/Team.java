@@ -41,9 +41,9 @@ public class Team {
      * @return Avenger
      */
     public Avenger getAvenger(String alias) {
-        for (int i = 0; i < avengerList.size(); i++) {
-            if (avengerList.get(i).getAlias().equals(alias)) {
-                return avengerList.get(i);
+        for (Avenger avenger : avengerList) {
+            if (avenger.getAlias().equals(alias)) {
+                return avenger;
             }
         }
         return null;
