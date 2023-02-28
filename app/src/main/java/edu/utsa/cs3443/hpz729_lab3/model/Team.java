@@ -22,15 +22,14 @@ public class Team {
 
     private ArrayList<Avenger> avengerList = new ArrayList<Avenger>();
 
-    public Team()
-    {
+    public Team() {
 
     }
 
-    public void addAvenger(Avenger avenger)
-    {
+    public void addAvenger(Avenger avenger) {
         avengerList.add(avenger);
     }
+
     /**
      * The getAvenger method takes in a string called alias
      * and returns and Avenger object if the alias if found. If
@@ -54,8 +53,7 @@ public class Team {
     @Override
     public String toString() {
         String s = "";
-        for(int i = 0;i < avengerList.size();i++)
-        {
+        for (int i = 0; i < avengerList.size(); i++) {
             s += avengerList.get(i).toString() + "\n";
         }
         return s;
@@ -70,10 +68,9 @@ public class Team {
         String seperator = ",";
         File folder = new File(String.valueOf(inputStream));
         File[] listOfFiles = folder.listFiles();
-
+        while (listOfFiles != null) {
             for (int i = 0; i < listOfFiles.length; i++) {
-                if (listOfFiles[i].isFile() && listOfFiles[i].getName().endsWith(".csv"))
-                {
+                if (listOfFiles[i].isFile() && listOfFiles[i].getName().endsWith(".csv")) {
                     try (BufferedReader buffer = new BufferedReader(new InputStreamReader(inputStream))) {
                         while ((line = buffer.readLine()) != null) {
                             String[] fields = line.split(seperator);
@@ -92,4 +89,5 @@ public class Team {
             }
         }
     }
+}
 
