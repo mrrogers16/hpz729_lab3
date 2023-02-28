@@ -22,6 +22,7 @@ public class AvengersController implements View.OnClickListener {
         this.context = context;
     }
 
+
     @Override
     public void onClick(View view) {
         team = new Team();
@@ -29,21 +30,20 @@ public class AvengersController implements View.OnClickListener {
 
         try {
             InputStream inputStream = assetManager.open("data.csv");
-                team.loadAvengers(inputStream);
+            team.loadAvengers(inputStream);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         avenger = team.getAvenger(alias);
-        if (avenger != null) {
-
+        if (avenger == null) {
+            Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
+        } else {
             Toast.makeText(view.getContext(), avenger.getAlias(), Toast.LENGTH_SHORT).show();
         }
-        else {
-            Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
-        }
     }
+
 
 
     public Team getTeam() {
