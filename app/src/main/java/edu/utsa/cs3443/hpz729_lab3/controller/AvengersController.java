@@ -29,9 +29,8 @@ public class AvengersController implements View.OnClickListener {
 
         try {
             InputStream inputStream = assetManager.open("data.csv");
-            while(inputStream != null) {
                 team.loadAvengers(inputStream);
-            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

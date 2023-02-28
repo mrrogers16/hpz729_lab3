@@ -1,6 +1,7 @@
 package edu.utsa.cs3443.hpz729_lab3.model;
 
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileReader;
@@ -61,19 +62,19 @@ public class Team {
     }
 
     /**
-     * @param directoryName - String of input files to build Avenger objects
+     * @param inputStream - InputStream of input files to build Avenger objects
      * @throws Exception
      */
-    public void loadAvengers(InputStream directoryName) throws Exception {
+    public void loadAvengers(InputStream inputStream) throws Exception {
         String line = "";
         String seperator = ",";
-        File folder = new File(String.valueOf(directoryName));
+        File folder = new File(String.valueOf(inputStream));
         File[] listOfFiles = folder.listFiles();
 
             for (int i = 0; i < listOfFiles.length; i++) {
                 if (listOfFiles[i].isFile() && listOfFiles[i].getName().endsWith(".csv"))
                 {
-                    try (BufferedReader buffer = new BufferedReader(new FileReader(listOfFiles[i]))) {
+                    try (BufferedReader buffer = new BufferedReader(new InputStreamReader(inputStream))) {
                         while ((line = buffer.readLine()) != null) {
                             String[] fields = line.split(seperator);
                             //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
