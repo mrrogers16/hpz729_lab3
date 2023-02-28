@@ -8,7 +8,8 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.Objects;
 
-/** Team.java is a class that contains an ArrayList of Avenger objects. It contains methods to
+/**
+ * Team.java is a class that contains an ArrayList of Avenger objects. It contains methods to
  * retrieve a specific Avenger named getAvenger(), an overridden toString() method that returns a
  * String representation of all of the members of the team, and a loadAvengers method that takes
  * in a String filepath.csv and builds Avenger objects from the properly formatted .csv, it returns
@@ -65,29 +66,21 @@ public class Team {
      */
     public void loadAvengers(InputStream inputStream) throws Exception {
         String line = "";
-        String seperator = ",";
-        File folder = new File(String.valueOf(inputStream));
-        File[] listOfFiles = folder.listFiles();
-        while (listOfFiles != null) {
-            for (int i = 0; i < listOfFiles.length; i++) {
-                if (listOfFiles[i].isFile() && listOfFiles[i].getName().endsWith(".csv")) {
-                    try (BufferedReader buffer = new BufferedReader(new InputStreamReader(inputStream))) {
-                        while ((line = buffer.readLine()) != null) {
-                            String[] fields = line.split(seperator);
-                            //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
+        String separator = ",";
+        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(inputStream))) {
+            while ((line = buffer.readLine()) != null) {
+                String[] fields = line.split(separator);
+                //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
+                Avenger avenger = new Avenger(fields[0], Integer.parseInt(fields[3]),
+                        Integer.parseInt(fields[4]), Integer.parseInt(fields[5]),
+                        fields[2], fields[7], Boolean.parseBoolean(fields[6]), fields[2]);
 
-                            Avenger avenger = new Avenger(fields[0], Integer.parseInt(fields[4]),
-                                    Integer.parseInt(fields[7]), Integer.parseInt(fields[1]),
-                                    fields[2], fields[3], Boolean.parseBoolean(fields[6]), fields[5]);
-
-                            avengerList.add(avenger);
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
+                avengerList.add(avenger);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
+
 
