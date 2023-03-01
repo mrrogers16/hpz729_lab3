@@ -13,8 +13,23 @@ import java.util.ArrayList;
 import edu.utsa.cs3443.hpz729_lab3.controller.*;
 import edu.utsa.cs3443.hpz729_lab3.model.*;
 
+/**
+ * This is the main method
+ *
+ * This class represents the main method of the Avengers app program (hpz729_lab3).
+ * It contains an onCreate method which creates an AvengersController which takes a context argument.
+ * The buttons objects are created and then linked to a onClickListener which takes in an String alias
+ * and/or and Context context.
+ *
+ * @author Mickey Clarke hpz729
+ * UTSA CS 3443 - Lab 2
+ * Spring 2023
+ * */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * @param savedInstanceState - Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

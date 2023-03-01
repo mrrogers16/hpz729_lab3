@@ -31,10 +31,18 @@ public class Team {
     private String alias;
     private Context context;
 
+    /**
+     * Default constructor that creates creates an ArrayList of Avenger objects and takes no arguments.
+     */
     public Team() {
         avengerList = new ArrayList<>();
     }
 
+    /**
+     * Team constructor that takes in a Context context parameter and initializes an ArrayList of
+     * Avenger objects.
+     * @param context - Context
+     */
     public Team(Context context) {
         this.context = context;
         avengerList = new ArrayList<>();
@@ -50,7 +58,7 @@ public class Team {
      * it is not null is returned.
      *
      * @param alias - String
-     * @return Avenger
+     * @return avenger - Avenger
      */
     public Avenger getAvenger(String alias) {
         for (Avenger avenger : avengerList) {
@@ -86,21 +94,12 @@ public class Team {
         try (BufferedReader buffer = new BufferedReader(new InputStreamReader(inputStream))) {
             while ((line = buffer.readLine()) != null) {
                 String[] fields = line.split(separator);
-                for (int i = 0; i < fields.length; ++i) {
-                    Log.d("Avengers App: hpz729", fields[i]);
-                }
-                //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
-                String name = fields[0];
-                float weight = Float.parseFloat(fields[5]);
-                String alias = fields[1];
-                String current_location = fields[7];
-                String height_feet = fields[3];
-                String height_inches = fields[4];
-                String gender = fields[2];
-                boolean hasPowers = Boolean.parseBoolean(fields[6]);
-
-                Avenger avenger = new Avenger(name, alias, gender, height_feet, height_inches,
-                        weight, hasPowers, current_location);
+//                for (int i = 0; i < fields.length; ++i) {
+//                    Log.d("Avengers App: hpz729", fields[i]);
+//                }
+//              Steve Rogers,Captain America,male,6,2,240,T,Pentagon
+                Avenger avenger = new Avenger(fields[0], fields[1], fields[2], fields[3], fields[4],
+                        Float.parseFloat(fields[5]), Boolean.parseBoolean(fields[6]), fields[7]);
 
                 avengerList.add(avenger);
             }

@@ -3,11 +3,7 @@ package edu.utsa.cs3443.hpz729_lab3.controller;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
-import android.content.res.AssetManager;
 import android.widget.Toast;
-
-import java.io.InputStream;
-
 import edu.utsa.cs3443.hpz729_lab3.model.*;
 
 /**
@@ -35,8 +31,6 @@ public class AvengersController implements View.OnClickListener {
         this.alias = alias;
         this.context = context;
     }
-
-
     /**
      * @param view
      */
@@ -58,8 +52,6 @@ public class AvengersController implements View.OnClickListener {
             Toast.makeText(view.getContext(), avenger.getCurrent_location(), Toast.LENGTH_SHORT).show();
         }
     }
-
-
     /**
      * @return team - Team
      */
