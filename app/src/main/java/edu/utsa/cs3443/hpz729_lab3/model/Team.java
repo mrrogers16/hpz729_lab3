@@ -72,9 +72,17 @@ public class Team {
             while ((line = buffer.readLine()) != null) {
                 String[] fields = line.split(separator);
                 //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
-                Avenger avenger = new Avenger(fields[0], Integer.parseInt(fields[3]),
-                        Integer.parseInt(fields[4]), Integer.parseInt(fields[5]),
-                        fields[2], fields[7], Boolean.parseBoolean(fields[6]), fields[2]);
+                String name = fields[0];
+                String weight = fields[5];
+                String alias = fields[1];
+                String current_location = fields[7];
+                String height_feet = fields[3];
+                String height_inches = fields[4];
+                String gender = fields[2];
+                boolean hasPowers = Boolean.parseBoolean(fields[6]);
+
+                Avenger avenger = new Avenger(name, alias, gender, height_feet, height_inches,
+                        weight, hasPowers, current_location);
 
                 avengerList.add(avenger);
             }

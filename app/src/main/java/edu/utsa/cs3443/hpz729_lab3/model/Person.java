@@ -11,9 +11,9 @@ package edu.utsa.cs3443.hpz729_lab3.model;
  */
 public abstract class Person {
     private String name; //Persons name
-    private int height_inches;
-    private int height_feet;//Persons height
-    private int weight; //Persons weight
+    private String height_inches;
+    private String height_feet;//Persons height
+    private String weight; //Persons weight
     private String gender;
     /**
      * Person constructor
@@ -23,7 +23,7 @@ public abstract class Person {
      * @param height_feet   - int
      * @param weight        - int
      */
-    public Person(String name, int height_inches, int height_feet, int weight, String gender) {
+    public Person(String name, String height_inches, String height_feet, String weight, String gender) {
         this.name = name;
         this.height_inches = height_inches;
         this.height_feet = height_feet;
@@ -58,30 +58,30 @@ public abstract class Person {
     }
 
 
-    public int getWeight() {
+    public String getWeight() {
         return weight;
     }
 
     /**
      * @param weight - int
      */
-    public void setWeight(int weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
-    public int getHeight_inches() {
+    public String getHeight_inches() {
         return height_inches;
     }
 
-    public void setHeight_inches(int height_inches) {
+    public void setHeight_inches(String height_inches) {
         this.height_inches = height_inches;
     }
 
-    public int getHeight_feet() {
+    public String getHeight_feet() {
         return height_feet;
     }
 
-    public void setHeight_feet(int height_feet) {
+    public void setHeight_feet(String height_feet) {
         this.height_feet = height_feet;
     }
 }
