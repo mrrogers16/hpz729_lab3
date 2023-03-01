@@ -4,7 +4,9 @@ import android.content.Context;
 import android.view.View;
 import android.content.res.AssetManager;
 import android.widget.Toast;
+
 import java.io.InputStream;
+
 import edu.utsa.cs3443.hpz729_lab3.model.*;
 
 public class AvengersController implements View.OnClickListener {
@@ -27,7 +29,12 @@ public class AvengersController implements View.OnClickListener {
 
         try {
             InputStream inputStream = assetManager.open("data.csv");
-            team.loadAvengers(inputStream);
+            if (inputStream != null) {
+                team.loadAvengers(inputStream);
+            }
+            else {
+                System.out.println("Input Stream is null and your program is broken");
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -35,12 +42,11 @@ public class AvengersController implements View.OnClickListener {
 
         avenger = team.getAvenger(alias);
         if (avenger == null) {
-           Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
         } else {
-           Toast.makeText(view.getContext(), avenger.getCurrent_location(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(view.getContext(), avenger.getCurrent_location(), Toast.LENGTH_SHORT).show();
         }
     }
-
 
 
     public Team getTeam() {
