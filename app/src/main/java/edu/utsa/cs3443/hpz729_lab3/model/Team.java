@@ -1,5 +1,10 @@
 package edu.utsa.cs3443.hpz729_lab3.model;
 
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.util.Log;
+
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -23,8 +28,15 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class Team {
 
     private ArrayList<Avenger> avengerList;
+    private String alias;
+    private Context context;
 
-    public Team() {
+    public Team(){
+        avengerList = new ArrayList<>();
+    }
+
+    public Team(Context context) {
+        this.context = context;
         avengerList = new ArrayList<>();
     }
 
@@ -62,34 +74,40 @@ public class Team {
     }
 
     /**
-     * @param inputStream - InputStream of input files to build Avenger objects
+     * @param context - InputStream of input files to build Avenger objects
      * @throws Exception
      */
-    public void loadAvengers(InputStream inputStream) throws Exception {
-        String line = "";
-        String separator = ",";
-        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(inputStream))) {
-            while ((line = buffer.readLine()) != null) {
-                String[] fields = line.split(separator);
-                //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
-                String name = fields[0];
-                String weight = fields[5];
-                String alias = fields[1];
-                String current_location = fields[7];
-                String height_feet = fields[3];
-                String height_inches = fields[4];
-                String gender = fields[2];
-                boolean hasPowers = Boolean.parseBoolean(fields[6]);
+    public void loadAvengers(Context context) throws Exception {
+        AssetManager assetManager = context.getAssets();
+        InputStream inputStream = assetManager.open("data.csv");
+            String line = "";
+            String separator = ",";
+            try (BufferedReader buffer = new BufferedReader(new InputStreamReader(inputStream))) {
+                while ((line = buffer.readLine()) != null) {
+                    String[] fields = line.split(separator);
+                    for (int i = 0; i < fields.length; ++i) {
+                        Log.d("Avengers App: hpz729", fields[i]);
+                    }
+                    //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
+                    String name = fields[0];
+                    String weight = fields[5];
+                    String alias = fields[1];
+                    String current_location = fields[7];
+                    String height_feet = fields[3];
+                    String height_inches = fields[4];
+                    String gender = fields[2];
+                    boolean hasPowers = Boolean.parseBoolean(fields[6]);
 
-                Avenger avenger = new Avenger(name, alias, gender, height_feet, height_inches,
-                        weight, hasPowers, current_location);
+                    Avenger avenger = new Avenger(name, alias, gender, height_feet, height_inches,
+                            weight, hasPowers, current_location);
 
-                avengerList.add(avenger);
+                    avengerList.add(avenger);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
-}
+
 
 

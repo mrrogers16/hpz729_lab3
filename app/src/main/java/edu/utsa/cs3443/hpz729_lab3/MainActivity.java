@@ -20,13 +20,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        AvengersController avengersController = new AvengersController(MainActivity.this);
         Button thor_btn = findViewById(R.id.thor);
         Button hulk_btn = findViewById(R.id.hulk);
         Button doctorS_btn = findViewById(R.id.doctor_strange);
         Button captain_btn = findViewById(R.id.capitan_america);
         Button spiderman_btn = findViewById(R.id.spiderman);
 
-        thor_btn.setOnClickListener(new AvengersController("God of Thunder",this));
+        thor_btn.setOnClickListener(new AvengersController("God of Thunder", this));
         hulk_btn.setOnClickListener(new AvengersController("Hulk", this));
         doctorS_btn.setOnClickListener(new AvengersController("Doctor Strange", this));
         captain_btn.setOnClickListener(new AvengersController("Captain America", this));

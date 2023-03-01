@@ -4,9 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.content.res.AssetManager;
 import android.widget.Toast;
-
 import java.io.InputStream;
-
 import edu.utsa.cs3443.hpz729_lab3.model.*;
 
 public class AvengersController implements View.OnClickListener {
@@ -16,6 +14,10 @@ public class AvengersController implements View.OnClickListener {
     private Context context;
     private String message;
 
+    public AvengersController(Context context)
+    {
+        this.context = context;
+    }
     public AvengersController(String alias, Context context) {
         this.alias = alias;
         this.context = context;
@@ -25,27 +27,20 @@ public class AvengersController implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         team = new Team();
-        AssetManager assetManager = context.getAssets();
+
 
         try {
-            InputStream inputStream = assetManager.open("data.csv");
-            if (inputStream != null) {
-                team.loadAvengers(inputStream);
-            }
-            else {
-                System.out.println("Input Stream is null and your program is broken");
-            }
-
+            team.loadAvengers(context);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         avenger = team.getAvenger(alias);
-        if (avenger == null) {
-            Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(view.getContext(), avenger.getCurrent_location(), Toast.LENGTH_SHORT).show();
-        }
+//        if (avenger == null) {
+//            Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
+//        } else {
+        Toast.makeText(view.getContext(), avenger.getCurrent_location(), Toast.LENGTH_SHORT).show();
+//        }
     }
 
 
