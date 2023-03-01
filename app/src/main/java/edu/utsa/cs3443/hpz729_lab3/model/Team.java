@@ -54,6 +54,7 @@ public class Team {
      */
     public Avenger getAvenger(String alias) {
         for (Avenger avenger : avengerList) {
+            Log.d("Avenger App:", avenger.toString());
             if (avenger.getAlias().equals(alias)) {
                 return avenger;
             }

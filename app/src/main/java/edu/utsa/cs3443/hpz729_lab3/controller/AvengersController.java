@@ -1,6 +1,7 @@
 package edu.utsa.cs3443.hpz729_lab3.controller;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.content.res.AssetManager;
 import android.widget.Toast;
@@ -36,6 +37,7 @@ public class AvengersController implements View.OnClickListener {
         }
 
         avenger = team.getAvenger(alias);
+        Log.d("Avengers App:", avenger.toString());
 //        if (avenger == null) {
 //            Toast.makeText(view.getContext(), "Avenger not found", Toast.LENGTH_SHORT).show();
 //        } else {
