@@ -31,7 +31,7 @@ public class Team {
     private String alias;
     private Context context;
 
-    public Team(){
+    public Team() {
         avengerList = new ArrayList<>();
     }
 
@@ -81,34 +81,34 @@ public class Team {
     public void loadAvengers(Context context) throws Exception {
         AssetManager assetManager = context.getAssets();
         InputStream inputStream = assetManager.open("data.csv");
-            String line = "";
-            String separator = ",";
-            try (BufferedReader buffer = new BufferedReader(new InputStreamReader(inputStream))) {
-                while ((line = buffer.readLine()) != null) {
-                    String[] fields = line.split(separator);
-                    for (int i = 0; i < fields.length; ++i) {
-                        Log.d("Avengers App: hpz729", fields[i]);
-                    }
-                    //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
-                    String name = fields[0];
-                    String weight = fields[5];
-                    String alias = fields[1];
-                    String current_location = fields[7];
-                    String height_feet = fields[3];
-                    String height_inches = fields[4];
-                    String gender = fields[2];
-                    boolean hasPowers = Boolean.parseBoolean(fields[6]);
-
-                    Avenger avenger = new Avenger(name, alias, gender, height_feet, height_inches,
-                            weight, hasPowers, current_location);
-
-                    avengerList.add(avenger);
+        String line = "";
+        String separator = ",";
+        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(inputStream))) {
+            while ((line = buffer.readLine()) != null) {
+                String[] fields = line.split(separator);
+                for (int i = 0; i < fields.length; ++i) {
+                    Log.d("Avengers App: hpz729", fields[i]);
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+                //Steve Rogers,Captain America,male,6,2,240,T,Pentagon
+                String name = fields[0];
+                float weight = Float.parseFloat(fields[5]);
+                String alias = fields[1];
+                String current_location = fields[7];
+                String height_feet = fields[3];
+                String height_inches = fields[4];
+                String gender = fields[2];
+                boolean hasPowers = Boolean.parseBoolean(fields[6]);
+
+                Avenger avenger = new Avenger(name, alias, gender, height_feet, height_inches,
+                        weight, hasPowers, current_location);
+
+                avengerList.add(avenger);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
+}
 
 
 

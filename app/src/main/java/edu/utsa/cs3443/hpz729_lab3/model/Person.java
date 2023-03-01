@@ -13,7 +13,7 @@ public abstract class Person {
     private String name; //Persons name
     private String height_inches;
     private String height_feet;//Persons height
-    private String weight; //Persons weight
+    private float weight; //Persons weight
     private String gender;
     /**
      * Person constructor
@@ -21,9 +21,9 @@ public abstract class Person {
      * @param name          - String
      * @param height_inches - int
      * @param height_feet   - int
-     * @param weight        - int
+     * @param weight        - float
      */
-    public Person(String name, String height_inches, String height_feet, String weight, String gender) {
+    public Person(String name, String height_inches, String height_feet, float weight, String gender) {
         this.name = name;
         this.height_inches = height_inches;
         this.height_feet = height_feet;
@@ -58,14 +58,14 @@ public abstract class Person {
     }
 
 
-    public String getWeight() {
+    public float getWeight() {
         return weight;
     }
 
     /**
      * @param weight - int
      */
-    public void setWeight(String weight) {
+    public void setWeight(float weight) {
         this.weight = weight;
     }
 

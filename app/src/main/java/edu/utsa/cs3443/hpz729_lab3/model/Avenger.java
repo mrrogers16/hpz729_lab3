@@ -26,7 +26,7 @@ public class Avenger extends Person {
      * @param powers - Boolean
      */
     public Avenger(String name, String alias, String gender, String height_feet, String height_inches,
-                   String weight, Boolean powers, String current_location) {
+                   float weight, Boolean powers, String current_location) {
         super(name, height_feet, height_inches, weight, gender);//Extends person class and inherits name, weight, and height
         this.alias = alias; //Super hero's alias (nickname)
         this.current_location = current_location; //Super hero's current location
