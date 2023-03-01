@@ -71,6 +71,8 @@ public class Team {
     }
 
     /**
+     * Overridden toString method. Loops through the avenger arraylist and appends each one to a
+     * String s which is returned on completion.
      * @return s - String representation of a Team of Avengers
      */
     @Override
