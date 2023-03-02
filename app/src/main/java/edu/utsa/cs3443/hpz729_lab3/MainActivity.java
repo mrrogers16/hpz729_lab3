@@ -26,10 +26,14 @@ import edu.utsa.cs3443.hpz729_lab3.model.*;
  * Spring 2023
  * */
 public class MainActivity extends AppCompatActivity {
-
-    /**
-     * @param savedInstanceState - Bundle
-     */
+/**
+ * Called when the activity is first created.
+ *
+ * This method is responsible for initializing the activity's UI components and
+ * data structures, setting up any event listeners, and restoring the activity's
+ * state if it has been previously saved.
+ * @param savedInstanceState - Bundle object
+ */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

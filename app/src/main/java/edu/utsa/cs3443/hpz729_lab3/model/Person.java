@@ -32,6 +32,7 @@ public abstract class Person {
     }
 
     /**
+     * Overridden toString method that returns a string representation of a Person object.
      * @return s - String representation of a person object
      */
     @Override
@@ -44,13 +45,15 @@ public abstract class Person {
 
 
     /**
-     * @return - String name
+     * Name getter
+     * @return name - String
      */
     public String getName() {
         return name;
     }
 
     /**
+     * Name setter
      * @param name - String
      */
     public void setName(String name) {
@@ -63,24 +66,41 @@ public abstract class Person {
     }
 
     /**
+     * Weight setter
      * @param weight - int
      */
     public void setWeight(float weight) {
         this.weight = weight;
     }
 
+    /**
+     * height_inches getter
+     * @return height_inches - String
+     */
     public String getHeight_inches() {
         return height_inches;
     }
 
+    /**
+     * height_inches setter
+     * @param height_inches
+     */
     public void setHeight_inches(String height_inches) {
         this.height_inches = height_inches;
     }
 
+    /**
+     * height_feet getter
+     * @return height_feet - String
+     */
     public String getHeight_feet() {
         return height_feet;
     }
 
+    /**
+     * height_feet setter
+     * @param height_feet - String
+     */
     public void setHeight_feet(String height_feet) {
         this.height_feet = height_feet;
     }
