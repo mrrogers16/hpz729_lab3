@@ -35,6 +35,7 @@ public class Avenger extends Person {
 
 
     /**
+     * Powers getter
      * @return powers - Boolean indicating if the hero has powers or not.
      */
     public boolean isPowers() {
@@ -42,6 +43,7 @@ public class Avenger extends Person {
     }
 
     /**
+     * Powers setter
      * @param powers - Boolean indicating if the hero has powers or not.
      */
     public void setPowers(boolean powers) {
@@ -49,6 +51,7 @@ public class Avenger extends Person {
     }
 
     /**
+     * Current location getter
      * @return current_location - String representing the hero's current location
      */
     public String getCurrent_location() {
@@ -56,6 +59,7 @@ public class Avenger extends Person {
     }
 
     /**
+     * Current location setter
      * @param current_location - String representing the hero's current location.
      */
     public void setCurrent_location(String current_location) {
@@ -63,6 +67,7 @@ public class Avenger extends Person {
     }
 
     /**
+     * Alias getter
      * @return alias - String
      */
     public String getAlias() {
@@ -70,12 +75,14 @@ public class Avenger extends Person {
     }
 
     /**
+     * Alias setter
      * @param alias - String
      */
     public void setAlias(String alias) { this.alias = alias;}
 
 
     /**
+     * Overridden toString method that returns a string representation of an Avenger object.
      * @return s - String representation of an Avengers object
      */
     @Override
