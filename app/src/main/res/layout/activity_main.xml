@@ -4,15 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/design_default_color_background"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/thor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World goodboy!"
+        android:text="@string/thor"
+        app:layout_constraintBottom_toTopOf="@+id/hulk"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <Button
+        android:id="@+id/capitan_america"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/capitan_america"
+        app:layout_constraintBottom_toTopOf="@+id/spiderman"
+        app:layout_constraintEnd_toEndOf="@+id/doctor_strange"
+        app:layout_constraintStart_toStartOf="@+id/doctor_strange"
+        app:layout_constraintTop_toBottomOf="@+id/hulk" />
+
+    <Button
+        android:id="@+id/spiderman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="105dp"
+        android:text="@string/spiderman"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/capitan_america"
+        app:layout_constraintStart_toStartOf="@+id/capitan_america"
+        app:layout_constraintTop_toBottomOf="@+id/capitan_america" />
+
+    <Button
+        android:id="@+id/doctor_strange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/doctor_strange"
+        app:layout_constraintEnd_toEndOf="@+id/hulk"
+        app:layout_constraintStart_toStartOf="@+id/hulk"
+        app:layout_constraintTop_toBottomOf="@+id/hulk" />
+
+    <Button
+        android:id="@+id/hulk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
+        android:text="@string/hulk"
+        app:layout_constraintBottom_toTopOf="@+id/capitan_america"
+        app:layout_constraintEnd_toEndOf="@+id/thor"
+        app:layout_constraintStart_toStartOf="@+id/thor"
+        app:layout_constraintTop_toBottomOf="@+id/thor" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="58dp"
+        android:background="@color/design_default_color_background"
+        app:layout_constraintBottom_toTopOf="@+id/thor"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shield" />
+
+    <EditText
+        android:id="@+id/lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:inputType="textPersonName"
+        android:text="@string/BannerName"
+        app:layout_constraintBottom_toTopOf="@+id/thor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

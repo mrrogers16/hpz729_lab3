@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">hpz729_lab3</string>
+    <string name="BannerName">S.H.I.E.L.D Avenger Locator</string>
+    <string name="spiderman">Spiderman</string>
+    <string name="thor">Thor</string>
+    <string name="hulk">Hulk</string>
+    <string name="doctor_strange">Doctor Strange</string>
+    <string name="capitan_america">Capitan America</string>
 </resources>
