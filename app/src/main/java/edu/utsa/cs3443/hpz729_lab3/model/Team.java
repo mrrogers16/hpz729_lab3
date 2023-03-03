@@ -3,16 +3,10 @@ package edu.utsa.cs3443.hpz729_lab3.model;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
-
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.io.File;
-import java.io.FileReader;
 import java.io.BufferedReader;
-import java.util.Objects;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Team.java is a class that contains an ArrayList of Avenger objects. It contains methods to
@@ -28,7 +22,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class Team {
 
     private ArrayList<Avenger> avengerList;
-    private String alias;
     private Context context;
 
     /**
@@ -86,7 +79,8 @@ public class Team {
 
     /**
      * @param context - InputStream of input files to build Avenger objects
-     * @throws Exception
+     * @throws Exception - I/O Exception (general exception) may throw NumberFormat or BooleanFormat
+     * exceptions.
      */
     public void loadAvengers(Context context) throws Exception {
         AssetManager assetManager = context.getAssets();
