@@ -41,6 +41,10 @@ public class Team {
         avengerList = new ArrayList<>();
     }
 
+    /**
+     * Adds an Avenger object to an ArrayList Avenger objects
+     * @param avenger - Avenger object
+     */
     public void addAvenger(Avenger avenger) {
         avengerList.add(avenger);
     }
@@ -55,7 +59,7 @@ public class Team {
      */
     public Avenger getAvenger(String alias) {
         for (Avenger avenger : avengerList) {
-            Log.d("Avenger App:", avenger.toString());
+            //Log.d("Avenger App:", avenger.toString());
             if (avenger.getAlias().equals(alias)) {
                 return avenger;
             }
@@ -90,10 +94,11 @@ public class Team {
         try (BufferedReader buffer = new BufferedReader(new InputStreamReader(inputStream))) {
             while ((line = buffer.readLine()) != null) {
                 String[] fields = line.split(separator);
-//                for (int i = 0; i < fields.length; ++i) {
-//                    Log.d("Avengers App: hpz729", fields[i]);
-//                }
-//              Steve Rogers,Captain America,male,6,2,240,T,Pentagon
+                for(String s : fields)
+                {
+                    System.out.println(Log.d("ArrayTagggg", fields.toString()));
+                }
+
                 Avenger avenger = new Avenger(fields[0], fields[1], fields[2], fields[3], fields[4],
                         Float.parseFloat(fields[5]), Boolean.parseBoolean(fields[6]), fields[7]);
 
