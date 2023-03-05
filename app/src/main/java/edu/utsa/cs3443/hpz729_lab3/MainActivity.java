@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AvengersController avengersController = new AvengersController(MainActivity.this);
         Button thor_btn = findViewById(R.id.thor);
         Button hulk_btn = findViewById(R.id.hulk);
         Button doctorS_btn = findViewById(R.id.doctor_strange);
