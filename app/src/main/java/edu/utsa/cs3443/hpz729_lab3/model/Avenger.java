@@ -1,9 +1,15 @@
 package edu.utsa.cs3443.hpz729_lab3.model;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 /**
+ * The given code defines a class Avenger that extends the Person class and adds additional
+ * attributes and methods specific to an Avenger object. The Avenger class has six
+ * attributes: name, alias, gender, height_feet, height_inches, weight, current_location, and
+ * powers. The class provides a constructor that initializes these attributes and also includes
+ * getter and setter methods to access and modify them.
+ *
+ * The toString() method is also overridden to provide a custom string representation of an
+ * Avenger object. This method returns a formatted string that includes the Avenger's name,
+ * height, weight, alias, current location, and whether or not the Avenger has super powers.
  *
  * @author Mickey Clarke (abc123)
  * UTSA CS 3443

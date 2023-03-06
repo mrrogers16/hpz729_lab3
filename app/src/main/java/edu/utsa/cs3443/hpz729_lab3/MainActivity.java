@@ -3,15 +3,8 @@ package edu.utsa.cs3443.hpz729_lab3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 import edu.utsa.cs3443.hpz729_lab3.controller.*;
-import edu.utsa.cs3443.hpz729_lab3.model.*;
 
 /**
  * This is the main method

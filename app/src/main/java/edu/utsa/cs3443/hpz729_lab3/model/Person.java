@@ -83,7 +83,7 @@ public abstract class Person {
 
     /**
      * height_inches setter
-     * @param height_inches
+     * @param height_inches - String
      */
     public void setHeight_inches(String height_inches) {
         this.height_inches = height_inches;

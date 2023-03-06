@@ -22,16 +22,6 @@ public class AvengersController implements View.OnClickListener {
     private String alias;
     private Context context;
     private String message;
-
-    /**
-     * AvengersController constructor takes in a Context context
-     *
-     * @param context - Context
-     */
-    public AvengersController(Context context) {
-        this.context = context;
-    }
-
     /**
      * AvengersController constructor takes in String alias, and Context context.
      *
